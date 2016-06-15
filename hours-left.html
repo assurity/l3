@@ -16,11 +16,34 @@
   @border-radius: 10px;
   @dot-size: 12px;
 
+  html { 
+    overflow-x: hidden; 
+  }
+
+  body {
+    background-color: #000;
+  }
+
+  .flip-clock-wrapper ul {
+        background: #fff;
+  }
+
+  .flip-clock-wrapper ul li a div.up:after {
+    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .flip-clock-wrapper ul li a div div.inn {
+    color: #111;
+    text-shadow: 0 1px 1px #555;
+    background-color: #ddd;
+  }
+
   .flip-clock-wrapper ul {
      width: (@clock-font-size * 0.8);
      height: @clock-height;
      margin: 0 (@digit-gap / 2);
- }
+  }
 
  .flip-clock-wrapper ul li {
    line-height: @clock-height;
