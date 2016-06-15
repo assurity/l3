@@ -103,13 +103,13 @@ less.refreshStyles();
 
          function getHoursLeft() {
            var hoursWorkedPerDay = 7;
-           var currentDate = new Date();
-           var endOfWorkDay  = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 17, 0, 0);
-           var remainingHoursToday  = parseInt((endOfWorkDay - currentDate) / 1000 / 3600);
-
            var endOfProgramme  = new Date("2016-07-20T17:00:00");
 
-           // Calculate the difference in hours between the future and current date
+           var currentDate = new Date();
+           var endOfWorkDay  = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 17, 0, 0);
+
+           var remainingHoursToday  = Math.max(parseInt((endOfWorkDay - currentDate) / 1000 / 3600), 0);
+
            var totalHoursLeft = parseInt((endOfProgramme.getTime() - currentDate.getTime()) / 1000 / 3600);
            var totalDaysLeft = parseInt(totalHoursLeft / 24);
            var totalWeeksLeft = parseInt(totalDaysLeft / 7);
