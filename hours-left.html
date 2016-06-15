@@ -134,18 +134,30 @@ less.refreshStyles();
 
          function getHoursLeft() {
            var hoursWorkedPerDay = 7;
-           var endOfProgramme  = new Date("2016-07-20T17:00:00");
+           var endOfProgramme  = new Date("2016-07-20 17:00:00");
 
            var currentDate = new Date();
            var endOfWorkDay  = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 17, 0, 0);
 
            var remainingHoursToday  = Math.max(parseInt((endOfWorkDay - currentDate) / 1000 / 3600), 0);
+           var dayOfWeek = currentDate.getDay()
+           if (dayOfWeek == 6 || dayOfWeek == 0) {
+              remainingHoursToday = 0;
+           }
 
            var totalHoursLeft = parseInt((endOfProgramme.getTime() - currentDate.getTime()) / 1000 / 3600);
            var totalDaysLeft = parseInt(totalHoursLeft / 24);
+           var workingDaysLeft = Math.min(totalDaysLeft % 7)
+           if (dayOfWeek == 6) {
+             workingDaysLeft = workingDaysLeft - 1
+           } else if (dayOfWeek > 0) {
+              if (dayOfWeek + workingDaysLeft > 7) {
+                workingDaysLeft = workingDaysLeft - 2;
+              }
+           }
            var totalWeeksLeft = parseInt(totalDaysLeft / 7);
             
-           var hoursLeft = (totalWeeksLeft * 5 * hoursWorkedPerDay) + (totalDaysLeft % 7) * hoursWorkedPerDay + Math.min(remainingHoursToday, hoursWorkedPerDay);
+           var hoursLeft = (totalWeeksLeft * 5 * hoursWorkedPerDay) + (workingDaysLeft * hoursWorkedPerDay) + Math.min(remainingHoursToday, hoursWorkedPerDay);
 
            return hoursLeft;
          }
