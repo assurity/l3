@@ -147,6 +147,8 @@ less.refreshStyles();
 
            var totalHoursLeft = parseInt((endOfProgramme.getTime() - currentDate.getTime()) / 1000 / 3600);
            var totalDaysLeft = parseInt(totalHoursLeft / 24);
+           var totalWeeksLeft = parseInt(totalDaysLeft / 7);
+
            var workingDaysLeft = Math.min(totalDaysLeft % 7)
            if (dayOfWeek == 6) {
              workingDaysLeft = workingDaysLeft - 1
@@ -155,7 +157,6 @@ less.refreshStyles();
                 workingDaysLeft = workingDaysLeft - 2;
               }
            }
-           var totalWeeksLeft = parseInt(totalDaysLeft / 7);
             
            var hoursLeft = (totalWeeksLeft * 5 * hoursWorkedPerDay) + (workingDaysLeft * hoursWorkedPerDay) + Math.min(remainingHoursToday, hoursWorkedPerDay);
 
