@@ -11,6 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 You will need the following installed to make changes to the project. The assumption is that you are using a windows machine to make changes to the project.
 
 You will need:
+
 1. GitHub
 2. Text Editor (Atom / Notepad++)
 3. Internet connection
