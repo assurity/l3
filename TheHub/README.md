@@ -1,4 +1,4 @@
-# Service Innovation Lab - Signboard
+# The Hub - Signboard
 
 We were tasked to create a digital signboard for the Service Innovation Lab.
 
