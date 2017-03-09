@@ -30,7 +30,7 @@ git clone https://github.com/assurity/l3.git
 Once you have cloned the repository to your local repository you can make changes to the ServiceInnovation\index.html in your favorite Text Editor
 
 ```
-ServiceInnovation\index.html
+TheHub\index.html
 ```
 
 ## Deployment
@@ -39,12 +39,11 @@ Once you have made your changes, in order for them to be shown on the digital si
 
 1. Commit changes to git
 2. Push changes to github
-3. On the digital signboard navigate to the url: https://assurity.github.io/l3/ServiceInnovation
+3. On the digital signboard navigate to the url: https://assurity.github.io/l3/TheHub
 
 ## Authors
 
-* **Ronak Bhatt** - *Initial work* - [ronakdbhatt](https://github.com/ronakdbhatt)
-* **Gavin Snyman** - *Contributing* - [GavinCutman](https://github.com/gavincutman)
+* **Gavin Snyman** - *Initial work* - [GavinCutman](https://github.com/gavincutman)
 
 See also the list of [contributors](https://github.com/assurity/l3/graphs/contributors) who participated in this project.
 
