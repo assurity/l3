@@ -139,7 +139,7 @@ p.logo strong {
 }
 #carousel .text p {
 	background: none repeat scroll 0 0 #233145;
-	display: inline-block;
+	display: flex;
 	color: #fff;
 	max-width: 1200px;
   font-size: 3em;
