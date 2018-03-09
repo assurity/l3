@@ -104,8 +104,8 @@ p.logo strong {
 }
 #carousel .text {
 	position:fixed;
-	top: 20%;
-	left: 18%;
+	top: 16%;
+	left: 14%;
 	z-index: 10;
 }
 #carousel .calendar {
